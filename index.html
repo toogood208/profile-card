@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="profile-page">
+    <article class="profile-card" data-testid="test-profile-card" aria-labelledby="profile-name">
+      <div class="profile-layout">
+        <div class="profile-hero" aria-hidden="true">
+          <div class="profile-hero-media"></div>
+          <div class="profile-floating-row">
+            <figure class="profile-avatar-figure">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=640&q=80"
+                alt="Portrait of Feti Bekwe, product designer and frontend developer"
+                class="profile-avatar"
+                data-testid="test-user-avatar"
+                id="profile-avatar"
+              />
+            </figure>
+
+            <div class="profile-brand-pill">
+              <span class="brand-icon"></span>
+              <span>Product Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-content">
+          <div class="profile-overview">
+            <header class="profile-header">
+              <div class="profile-intro">
+                <p class="profile-kicker">Product Designer • Frontend Developer</p>
+                <h1 id="profile-name" data-testid="test-user-name">Feti Bekwe</h1>
+                <p class="profile-role">Accessible systems, prototypes, and practical UI thinking</p>
+                <p class="profile-bio" data-testid="test-user-bio">
+                  Feti designs thoughtful interfaces for complex products, with a focus on accessibility,
+                  prototyping, and turning ambiguous product goals into clean, practical UI systems.
+                </p>
+              </div>
+
+              <button type="button" class="profile-save-button" aria-label="Save profile">
+                <span class="bookmark-icon" aria-hidden="true"></span>
+              </button>
+            </header>
+
+            <section class="profile-time-section" aria-labelledby="profile-time-label">
+              <span class="section-label" id="profile-time-label">Live Epoch</span>
+              <time
+                class="profile-time"
+                data-testid="test-user-time"
+                id="profile-time"
+                aria-live="polite"
+              >0</time>
+            </section>
+
+            <section class="profile-secondary" id="profile-connect" aria-label="Profile details">
+              <nav class="profile-socials" aria-label="Social links">
+                <span class="section-label">Social Links</span>
+                <ul class="social-links" data-testid="test-user-social-links" role="list">
+                  <li>
+                    <a
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-testid="test-user-social-github"
+                    >GitHub</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-testid="test-user-social-linkedin"
+                    >LinkedIn</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://x.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-testid="test-user-social-twitter"
+                    >X</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="profile-lists">
+                <section class="profile-section" aria-labelledby="profile-hobbies-label">
+                  <h2 class="section-label" id="profile-hobbies-label">Hobbies</h2>
+                  <ul class="pill-list" data-testid="test-user-hobbies">
+                    <li>Street photography</li>
+                    <li>Trail running</li>
+                    <li>Sketching interfaces</li>
+                  </ul>
+                </section>
+
+                <section class="profile-section" aria-labelledby="profile-dislikes-label">
+                  <h2 class="section-label" id="profile-dislikes-label">Dislikes</h2>
+                  <ul class="pill-list dislikes" data-testid="test-user-dislikes">
+                    <li>Unreadable contrast</li>
+                    <li>Ambiguous specs</li>
+                    <li>Notification overload</li>
+                  </ul>
+                </section>
+              </div>
+
+              <section class="profile-section profile-avatar-tools" aria-labelledby="profile-avatar-tools-label">
+                <h2 class="section-label" id="profile-avatar-tools-label">Avatar Source</h2>
+                <div class="avatar-tools-grid">
+                  <div class="avatar-field">
+                    <label for="avatar-url-input">Image URL</label>
+                    <input
+                      type="url"
+                      id="avatar-url-input"
+                      placeholder="https://example.com/avatar.jpg"
+                    />
+                  </div>
+                  <button type="button" id="apply-avatar-url-btn">Confirm</button>
+                  <div class="avatar-field">
+                    <label for="avatar-file-input">Upload profile image</label>
+                    <input type="file" id="avatar-file-input" accept="image/*" />
+                  </div>
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
